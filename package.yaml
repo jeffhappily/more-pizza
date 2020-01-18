@@ -1,0 +1,42 @@
+name:                more-pizza
+version:             0.1.0.0
+github:              "jeffhappily/more-pizza"
+license:             BSD3
+author:              "jeffhappily"
+maintainer:          "goodboy96@live.com.my"
+copyright:           "2020 jeffhappily"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/jeffhappily/more-pizza#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+executables:
+  more-pizza-exe:
+    main:                Main.hs
+    source-dirs:         .
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+
+tests:
+  more-pizza-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - more-pizza-exe
