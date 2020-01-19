@@ -20,6 +20,8 @@ description:         Please see the README on GitHub at <https://github.com/jeff
 
 dependencies:
 - base >= 4.7 && < 5
+- trifecta
+- parsers
 
 executables:
   more-pizza-exe:
