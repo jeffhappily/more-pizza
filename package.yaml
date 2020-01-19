@@ -23,14 +23,19 @@ dependencies:
 - trifecta
 - parsers
 
+library:
+  source-dirs: src
+
 executables:
   more-pizza-exe:
     main:                Main.hs
-    source-dirs:         .
+    source-dirs:         app
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    dependencies:
+      - more-pizza
 
 tests:
   more-pizza-test:
@@ -41,4 +46,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - more-pizza-exe
+    - more-pizza
